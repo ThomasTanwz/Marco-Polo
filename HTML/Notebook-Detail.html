@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>  
+
+<!-- Notepad component>
+<!-- Include Quill stylesheet and library via CDN download-->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+<!--refs to generate and customize map and text editor on Notebook page-->
+<link rel="stylesheet" href="../CSS/Notebook-Detail.css">
+<script async defer src="../Javascript/Notebook-Detail.js"></script>
+
+<!--Usage of Google Map API Key-->  
+62982255
+<!-- Create the map container -->
+<div id="map"></div>
+<!-- This button gives user the option to route all existing markers on the map-->
+<button id="route-markers">Route My Markers! </button>
+<!-- This button allows users to submit the marker set for text processing-->
+<button id="submit-markers">Submit My Markers! </button>
+<!-- A hidden drop down list, toggled on by js once markers are submitted-->
+<select id="select-markers" hidden>
+  <option>Choose a marker</option>
+</select>
+<!-- a button allow people to compose journal, click button to submit text, will display after markers submitted-->
+<button id="compose-journal" style="display:none">Compose My Journal!</button>
+<!--This button clears all the markers on the map-->
+<button id="clear-markers">Clear My Markers!</button>
+<!-- Create the editor container -->
+<div id="editor"></div>
+
+</body>
+</html>
+
