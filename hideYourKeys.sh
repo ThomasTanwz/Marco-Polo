@@ -23,14 +23,11 @@ fi
   #replace the API with this random number
   sed -i "s@$line@$rand@" $path
   #now commit entire thing to GitHub
-  git checkout --orphan origin
-  git add -A
+  git add .
   echo "enter your commit message here: "
   read message
-  git commit -am message
-  git branch -D master
-  git branch -m master
-  git push -f origin master
+  git commit -m "$message"
+  git push origin master
   #now put the key back to the file, program finished
   #pay attention to the ampersand signs due to sed, those are escaping arguments
   sed -i "s@$rand@${line//&/\\&}@" $path
